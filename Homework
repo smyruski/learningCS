@@ -1,0 +1,133 @@
+
+###########################################
+
+## Duck, duck, goose!
+
+## Store your own name in a variable. Ask the user for his/her/their name. Print goose if the user's name matches yours;
+## otherwise, print duck. The point of this exercise is to familiarize ourselves with string comparisons.
+## Up until now, we have only compared numeric values. Please think about other intances in which string comparisons
+## can be useful.
+
+name = "Sarah"
+user_name = raw_input ("What is your name?")
+
+if user_name == name:
+    print "goose"
+else:
+    print "duck"
+
+###########################################
+
+## Cash register
+
+## Ask the user to input the prices of 3 items and type of dollar he/she/they wish to use. Let the user know if the amount
+## given is enough.
+
+## Hint: account for excess change, just enough change, and too few change.
+
+item1 = float(raw_input("How much does item 1 cost?"))
+item2 = float(raw_input("How much does item 2 cost?"))
+item3 = float(raw_input("How much does item 3 cost?"))
+total_cost = float(item1 + item2 + item3)
+
+dollar = float(raw_input("What denomination of bill do you wish to use?"))
+change = dollar - total_cost
+short = -change
+
+if dollar == total_cost:
+    print "You have exact change!"
+elif dollar > total_cost:
+    print "You get", change, "change!"
+elif dollar < total_cost:
+    print "Sorry, you need", short, "more!"
+
+###########################################
+
+## Chore assignment
+
+## Let's say you want to randomly assign one of three types of chores (sweeping the floor, dishes, dusting the piano,
+## etc.) to your friends and family members. Have the user input his/her/their name and an integer between 1 and 99.
+## Based on this number, you will assign a task to the user by printing out his/her/their name and the task.
+
+name = raw_input("What is your name?")
+integer = int(raw_input("Type an integer between 1 and 99 to get your chore assignment: "))
+
+if integer % 3 == 0:
+    print name,"'s chore: SWEEP THE DUNGEON!"
+elif integer % 3 == 1:
+    print name,"'s chore: SCRUB THE SLUDGE PITS!"
+elif integer % 3 == 2:
+    print name,"'s chore: FEED THE DEMON CAT!"
+
+
+###########################################
+
+## Lost pet...
+
+## You are searching for your missing pet, whose name and species I leave up to you. Suppose people have been
+## calling you to report lost pets they have found. Get the name and species of the pet in question, and
+## compare these answers to your missing pet's name and species. Generate appropriate output.
+
+pet_name = raw_input("You're calling about a found pet? What is the pet's name?")
+pet_species = raw_input("What is the pet's species?")
+
+my_pet_name = "Deli"
+my_pet_species = "cat"
+
+if pet_name == my_pet_name and pet_species == my_pet_species:
+    print "That's my", pet_species, pet_name, "!"
+elif pet_name == my_pet_name and pet_species != my_pet_species:
+    print "That's not my pet! It's a weird", pet_species, "named", pet_name, "!"
+elif pet_name != my_pet_name and pet_species == my_pet_species:
+    print "That's some other", pet_species, "not,", my_pet_name, "!"
+else:
+    print "No, you're way off! I don't know anything about a", pet_species, "named", pet_name, "!"
+
+
+###########################################
+
+## Letter grade calculation
+
+## Ask the user for 3 exam grades, which you will need to store as floating point numbers. Calculate the
+## average of 3 grades and its corresponding letter grade. You may use A, B, C, D, without accounting for
+## pluses/minuses. Example: user inputs 88.3, 95.7, and 96. He/she/they will then receive a letter grade of A.
+## You may choose to print out the average AND the letter grade for debugging purposes.
+
+## Hint: we did NOT learn about elif statements yet, but we did learn about logic operators, which can be used
+## to evaluate two or more boolean expressions at once.
+
+Exam1 = float(raw_input("What was your Exam 1 grade?"))
+Exam2 = float(raw_input("What was your Exam 2 grade?"))
+Exam3 = float(raw_input("What was your Exam 3 grade?"))
+
+Exam_average = (Exam1 + Exam2 + Exam3)/3
+
+if Exam_average >= 90.0:
+    print "Your exam average is", Exam_average, "and your final letter grade is A! Woohoo!"
+
+if 80.0 <= Exam_average < 90.0:
+    print "Your exam average is", Exam_average, "and your final letter grade is B."
+
+if 70.0 <= Exam_average < 80.0:
+    print "Your exam average is", Exam_average, "and your final letter grade is C."
+
+if 60.0 <= Exam_average < 70.0:
+    print "Your exam average is", Exam_average, "and your final letter grade is D."
+
+if Exam_average < 60.0:
+    print "Your exam average is", Exam_average, "and your final letter grade is F... :("
+
+
+
+
+
+
+###########################################
+
+## Lab assignment
+
+## Rohini suggested a wonderful idea for the class to begin solving lab problems with our current programming
+## expertise. Please choose a self-report questionnaire, screening questionnaire, or questions we ask during
+## study visits, and devise a series of if statements pertaining to the outcomes of your chosen questionnaire.
+## Bring your results to class next week, and share your code with your classmates.
+

@@ -198,7 +198,7 @@
 
 import random
 
-question = str(raw_input("Ask a yes or no question to hear your fortune."))
+question = str(raw_input("Ask a yes or no question to get your fortune."))
 
 magic = ["Outlook not so good.", "Ask again later.", "You may rely on it.", "I have no idea."]
 
